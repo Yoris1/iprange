@@ -1,5 +1,5 @@
 function print_usage()
-	print("Usage: IP1 IP2 [OPTION]")
+	print("Usage: iprange IP1 IP2 [OPTION]")
 	print("Counts IPs within a range")
 	print()
 	print("IP1 and IP2 must be valid IPv4 or IPv6 addresses")
