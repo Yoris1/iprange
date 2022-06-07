@@ -3,7 +3,7 @@ require "ip"
 IPv6 = IP:new()
 
 function IPv6:is_valid()
-	ipv6_pattern = string.rep("%x+%:", 7).."%x+"
+	ipv6_pattern = "^"..string.rep("%x+%:", 7).."%x+$"
 	if not string.match(self.string_representation, ipv6_pattern) then 
 		return false
 	end

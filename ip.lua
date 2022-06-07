@@ -24,12 +24,9 @@ function getIPRange(ip1, ip2)
 	for i,octet1 in pairs(ip1.octets) do
 		octet2 = ip2.octets[i]
 		diff = octet2-octet1
-		print(i.." "..octet1..":"..octet2.." diff: "..diff)
-		
 		exponent = (#ip1.octets-i)*(#ip1.octets*2)
 		diff = math.floor(diff*2^exponent)
 		range = range+diff
 	end
 	return range
 end
--- issue with IP validation: can have .... at the end and it will still validate.

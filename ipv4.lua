@@ -3,7 +3,7 @@ require "ip"
 IPv4 = IP:new()
 
 function IPv4:is_valid()
-	ipv4_pattern = "%d+%.%d+%.%d+%.%d+"
+	ipv4_pattern = "^"..string.rep("%d+%.", 3).."%d+$"
 	if not string.match(self.string_representation, ipv4_pattern) then 
 		return false
 	end
