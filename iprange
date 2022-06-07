@@ -1,3 +1,4 @@
+#!/usr/bin/env lua
 require "ipv4"
 require "ipv6"
 require "usage"
