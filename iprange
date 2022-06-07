@@ -17,7 +17,7 @@ if arg[1] and arg[2] then
 	ip1 = newIP(arg[1], ip_class)
 	ip2 = newIP(arg[2], ip_class)
 	if ip1 and ip2 then
-		print(getIPRange(ip1, ip2))
+		print(ip1:range_to(ip2))
 	else
 		print_usage()
 	end

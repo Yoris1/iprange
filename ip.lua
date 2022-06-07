@@ -19,12 +19,12 @@ function newIP(string_representation, parent)
 	return obj
 end
 
-function getIPRange(ip1, ip2) 
+function IP:range_to(ip2) 
 	range = 0
-	for i,octet1 in pairs(ip1.octets) do
+	for i,octet1 in pairs(self.octets) do
 		octet2 = ip2.octets[i]
 		diff = octet2-octet1
-		exponent = (#ip1.octets-i)*(#ip1.octets*2)
+		exponent = (#self.octets-i)*(#self.octets*2)
 		diff = math.floor(diff*2^exponent)
 		range = range+diff
 	end
