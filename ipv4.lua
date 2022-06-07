@@ -3,11 +3,12 @@ require "ip"
 IPv4 = IP:new()
 
 function IPv4:is_valid()
-	if not string.match(self.string_representation, "%d+%.%d+%.%d+%.%d+") then 
+	ipv4_pattern = "%d+%.%d+%.%d+%.%d+"
+	if not string.match(self.string_representation, ipv4_pattern) then 
 		return false
 	end
 
-	octets = self:get_octets(a)
+	octets = self:get_octets()
 
 	if #octets ~= 4 then
 		return false

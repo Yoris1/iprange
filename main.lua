@@ -1,8 +1,15 @@
 require "ipv4"
+require "ipv6"
+
 if arg[1] and arg[2] then
-	ip1 = newIP(arg[1], IPv4)
-	ip2 = newIP(arg[2], IPv4)
+	ip_class = IPv4
+	if arg[3] and arg[3] == "-ipv6" then
+		ip_class = IPv6
+	end
+	ip1 = newIP(arg[1], ip_class)
+	ip2 = newIP(arg[2], ip_class)
 	if ip1 and ip2 then
+		print("hi")
 		print(ip2.numeric_representation-ip1.numeric_representation)
 	end
 end
