@@ -1,8 +1,8 @@
 # iprange
 Counts IPs within a range
 
-Usage: `.iprange IP1 IP2 [OPTION]`
+Usage: `./iprange IP1 IP2 [OPTION]`
 
-assumnes IPv4 implicitly
+**Implicitly assumes IPv4** (can explicitly specify ipv4 with `-ipv4` and ipv6 with `-ipv6` )
 
-Can run with `lua iprange` or `./iprange`
+Run with `lua iprange` or `./iprange`
